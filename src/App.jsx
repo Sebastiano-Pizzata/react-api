@@ -15,49 +15,51 @@ function App() {
 
   return (
     <>
-      <table className="table table-striped">
-        <thead>
-          <tr>
-            {
-              products.map((product) => {
-                return (
-                  <th key={product.id} scope='col'>{product.titolo}</th>
-                )
-              })
-            }
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            {
-              products.map((product) => {
-                return (
-                  <td key={product.id}>{product.contenuto}</td>
-                )
-              })
-            }
-          </tr>
-          <tr>
-            {
-              products.map((product) => {
-                return (
-                  <td key={product.id}>{product.image}</td>
-                )
-              })
-            }
-          </tr>
-          <tr >
-            {
-              products.map((product) => {
-                return (
-                  <td key={product.id}>#{product.tags}</td>
-                )
-              })
-            }
+      <div className='container'>
+        <table className="table table-striped">
+          <thead>
+            <tr>
+              {
+                products.map((product) => {
+                  return (
+                    <th key={product.id} scope='col'>{product.titolo}</th>
+                  )
+                })
+              }
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              {
+                products.map((product) => {
+                  return (
+                    <td key={product.id}>{product.contenuto}</td>
+                  )
+                })
+              }
+            </tr>
+            <tr>
+              {
+                products.map((product) => {
+                  return (
+                    <td key={product.id}>{product.image}</td>
+                  )
+                })
+              }
+            </tr>
+            <tr >
+              {
+                products.map((product) => {
+                  return (
+                    <td key={product.id}>#{product.tags}</td>
+                  )
+                })
+              }
 
-          </tr>
-        </tbody>
-      </table>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </>
   )
 }
